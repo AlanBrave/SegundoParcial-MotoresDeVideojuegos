@@ -19,6 +19,20 @@ public class Juego : MonoBehaviour
     public int Mejora2Precio;
     public Text Mejora2text;
 
+    //TIENDA
+    public int Tienda1Precio;
+    public Text Tienda1text;
+
+    public int Tienda2Precio;
+    public Text Tienda2text;
+
+    public int Tienda3Precio;
+    public Text Tienda3text;
+
+    //DINERO
+    public int Dinero1Precio;
+    public Text Dinero1text;
+
 
     //Funcionamiento principal del clicker
     void Start() 
@@ -40,6 +54,18 @@ public class Juego : MonoBehaviour
 
         Mejora1text.text = "Mejora 1 (+1) (25): " + Mejora1Precio+" #";
         Mejora2text.text = "Mejora 2 (Aumento) (125): " + Mejora2Precio + " #";
+
+        //TIENDA
+
+        Tienda1text.text = "Cañon: " + Tienda1Precio + " #";
+        Tienda2text.text = "Pistola Chatarra: " + Tienda2Precio + " #";
+        Tienda3text.text = "M98: " + Tienda3Precio + " #";
+
+        //DINERO
+
+        Dinero1text.text = "Dinero: " + Tienda1Precio + " $";
+        Dinero1text.text = "Dinero: " + Tienda2Precio + " $";
+        Dinero1text.text = "Dinero: " + Tienda3Precio + " $";
     }
 
     //Funcionamiento principal del clicker
@@ -66,6 +92,37 @@ public class Juego : MonoBehaviour
             currentScore -= Mejora2Precio;
             x +=5;
             Mejora1Precio +=125;
+        }
+    }
+
+    //TIENDA
+    public void Tienda1()
+    {
+        if (currentScore >= Tienda1Precio)
+        {
+            currentScore -= Tienda1Precio;
+            
+            Dinero1text.text += 25;
+        }
+    }
+
+    public void Tienda2()
+    {
+        if (currentScore >= Tienda2Precio)
+        {
+            currentScore -= Tienda2Precio;
+
+            Dinero1text.text += 50;
+        }
+    }
+
+    public void Tienda3()
+    {
+        if (currentScore >= Tienda3Precio)
+        {
+            currentScore -= Tienda3Precio;
+
+            Dinero1text.text += 100;
         }
     }
 }
