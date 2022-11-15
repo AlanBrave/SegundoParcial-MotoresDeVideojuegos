@@ -52,20 +52,19 @@ public class Juego : MonoBehaviour
 
         // MEJORAS
 
-        Mejora1text.text = "Mejora 1 (+1) (25): " + Mejora1Precio+" #";
-        Mejora2text.text = "Mejora 2 (Aumento) (125): " + Mejora2Precio + " #";
+        Mejora1text.text = "Mejora (+1): " +Mejora1Precio+" #";
+        Mejora2text.text = "Mejora (+5): " +Mejora2Precio+" #";
 
         //TIENDA
 
         Tienda1text.text = "Cañon: " + Tienda1Precio + " #";
-        Tienda2text.text = "Pistola Chatarra: " + Tienda2Precio + " #";
-        Tienda3text.text = "M98: " + Tienda3Precio + " #";
+        Tienda2text.text = "Pistola: " + Tienda2Precio + " #";
+        Tienda3text.text = "M-98: " + Tienda3Precio + " #";
 
         //DINERO
 
-        Dinero1text.text = "Dinero: " + Tienda1Precio + " $";
-        Dinero1text.text = "Dinero: " + Tienda2Precio + " $";
-        Dinero1text.text = "Dinero: " + Tienda3Precio + " $";
+        Dinero1text.text = "Dinero: " + Dinero1Precio + " $";
+       
     }
 
     //Funcionamiento principal del clicker
@@ -87,42 +86,42 @@ public class Juego : MonoBehaviour
     }
     public void Mejora2()
     {
-        if (currentScore >= Mejora2Precio)
+        if (currentScore>=Mejora2Precio)
         {
             currentScore -= Mejora2Precio;
             x +=5;
-            Mejora1Precio +=125;
+            Mejora2Precio +=125;
         }
     }
 
     //TIENDA
     public void Tienda1()
     {
-        if (currentScore >= Tienda1Precio)
+        if (currentScore>=Tienda1Precio)
         {
             currentScore -= Tienda1Precio;
             
-            Dinero1text.text += 25;
+            Dinero1Precio +=25;
         }
     }
 
     public void Tienda2()
     {
-        if (currentScore >= Tienda2Precio)
+        if (currentScore>=Tienda2Precio)
         {
             currentScore -= Tienda2Precio;
 
-            Dinero1text.text += 50;
+            Dinero1Precio +=50;
         }
     }
 
     public void Tienda3()
     {
-        if (currentScore >= Tienda3Precio)
+        if (currentScore>=Tienda3Precio)
         {
             currentScore -= Tienda3Precio;
 
-            Dinero1text.text += 100;
+            Dinero1Precio +=100;
         }
     }
 }
