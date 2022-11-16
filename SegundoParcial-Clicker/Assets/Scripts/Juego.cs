@@ -73,7 +73,7 @@ public class Juego : MonoBehaviour
         currentScore += hitPower;
     }
 
-    //MEJORAS
+    //MEJORAS-CODIGOS
 
     public void Mejora1() 
     {
@@ -94,7 +94,7 @@ public class Juego : MonoBehaviour
         }
     }
 
-    //TIENDA
+    //TIENDA-CODIGOS
     public void Tienda1()
     {
         if (currentScore>=Tienda1Precio)
