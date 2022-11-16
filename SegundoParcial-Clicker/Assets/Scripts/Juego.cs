@@ -57,13 +57,13 @@ public class Juego : MonoBehaviour
 
         //TIENDA
 
-        Tienda1text.text = "Cañon: " + Tienda1Precio + " #";
-        Tienda2text.text = "Pistola: " + Tienda2Precio + " #";
-        Tienda3text.text = "M-98: " + Tienda3Precio + " #";
+        Tienda1text.text = "Cañon: " + Tienda1Precio + " # 25$";
+        Tienda2text.text = "Pistola: " + Tienda2Precio + " # 50$";
+        Tienda3text.text = "M-98: " + Tienda3Precio + " # 100$";
 
         //DINERO
 
-        Dinero1text.text = "Dinero: " + Dinero1Precio + " $";
+        Dinero1text.text = "$: " + Dinero1Precio;
        
     }
 

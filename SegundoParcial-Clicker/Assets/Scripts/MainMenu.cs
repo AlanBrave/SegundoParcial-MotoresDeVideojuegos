@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("MENU");
 
     }
+
+    public void EscenaInfoS()
+    {
+        SceneManager.LoadScene("INFO");
+    }
 }
